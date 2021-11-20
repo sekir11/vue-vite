@@ -2,6 +2,7 @@
 
   <img alt="Vue logo" src="./assets/logo.png" />
   <div id="app">
+    <HelloWorld />
     <Calc :title="message" v-on:result-event="appAction" />
     <div class="mt-3 text-left">
       <table class="table" v-html="log"></table>
@@ -14,11 +15,12 @@
 
 <script>
 import Calc from './components/Calc.vue'
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    Calc
+    Calc, HelloWorld
   },
   data() {
     return {
